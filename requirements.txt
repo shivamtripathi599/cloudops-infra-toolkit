@@ -1,0 +1,10 @@
+# CloudOps Infra Toolkit - runtime dependencies
+#
+# The toolkit runs on the Python standard library ONLY. No third-party
+# packages are required to use `cloudops` or to run the test suite.
+#
+# Optional, development-only tooling (not imported by the package):
+#   pytest>=7.0      # running the unit tests in tests/
+#
+# Install dev/test extras with:
+#   pip install -r requirements-dev.txt

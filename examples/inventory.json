@@ -1,0 +1,62 @@
+[
+  {
+    "name": "prod-api-ec2",
+    "type": "ec2",
+    "region": "us-east-1",
+    "monthly_cost": 184.20
+  },
+  {
+    "name": "prod-worker-ec2",
+    "type": "ec2",
+    "region": "us-east-1",
+    "monthly_cost": 142.75
+  },
+  {
+    "name": "staging-ec2",
+    "type": "ec2",
+    "region": "eu-west-1",
+    "monthly_cost": 96.40
+  },
+  {
+    "name": "prod-rds",
+    "type": "rds",
+    "region": "us-east-1",
+    "monthly_cost": 312.50
+  },
+  {
+    "name": "analytics-rds",
+    "type": "rds",
+    "region": "eu-west-1",
+    "monthly_cost": 205.10
+  },
+  {
+    "name": "cdn-distribution",
+    "type": "cloudfront",
+    "region": "global",
+    "monthly_cost": 78.90
+  },
+  {
+    "name": "primary-s3",
+    "type": "s3",
+    "region": "us-east-1",
+    "monthly_cost": 23.15
+  },
+  {
+    "name": "archive-s3",
+    "type": "s3",
+    "region": "eu-west-1",
+    "monthly_cost": 11.80
+  },
+  {
+    "name": "lambda-batch",
+    "type": "lambda",
+    "region": "us-east-1",
+    "monthly_cost": 4.30
+  },
+  {
+    "name": "eks-cluster",
+    "type": "eks",
+    "region": "us-east-1",
+    "monthly_cost": 146.00
+  }
+]
