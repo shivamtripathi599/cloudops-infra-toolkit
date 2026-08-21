@@ -1,27 +1,15 @@
-name: CI
+# Reusable CI caller — consumes the shared workflow from
+# github-actions-ci-templates so pipeline logic lives in one place.
+name: ci
 
 on:
   push:
-    branches: [main, master]
+    branches: [main]
   pull_request:
 
 jobs:
-  test:
-    runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        python-version: ["3.11"]
-    steps:
-      - uses: actions/checkout@v4
-      - name: Set up Python ${{ matrix.python-version }}
-        uses: actions/setup-python@v5
-        with:
-          python-version: ${{ matrix.python-version }}
-      - name: Install test deps
-        run: pip install pytest
-      - name: Run pytest
-        run: pytest -q
-      - name: Smoke test the CLI (dry-run, no credentials)
-        run: |
-          python -m cloudops cost-report --inventory examples/inventory.json
-          python -m cloudops pod-restart --dry-run
+  python:
+    uses: shivamtripathi599/github-actions-ci-templates/.github/workflows/python-ci.yml@main
+    with:
+      python-version: "3.11"
+      install-command: "pip install -e . && pip install pytest"
